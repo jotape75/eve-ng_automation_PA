@@ -1,11 +1,11 @@
-# 🔥 Palo Alto Firewall Automation
+# 🔥 Palo Alto Firewall Automation using Python
 
 ![Python](https://img.shields.io/badge/python-3.8+-blue.svg)
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
 ![Network](https://img.shields.io/badge/network-automation-orange.svg)
 ![Palo Alto](https://img.shields.io/badge/palo%20alto-firewall-red.svg)
 
-Comprehensive two-phase automation solution for Palo Alto firewall deployment with High Availability configuration, interface management, security policies, and real-time monitoring.
+Comprehensive two-phase automation solution for Palo Alto firewall deployment with High Availability configuration, interface management, security policies, and real-time monitoring using Python.
 
 ## 🌟 Key Features
 
