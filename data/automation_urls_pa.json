@@ -1,0 +1,15 @@
+{
+    "urls": {
+        "pa_creds_file": "/home/user/pystudies/myenv/pythonbasic/projects/eve-ng_automation_PA/data/dev_creds_pa.json",
+        "ftd_node_payload":"/home/user/pystudies/myenv/pythonbasic/projects/eve-ng_automation_FTD/data/payload/ftd_node.json",
+        "pa_initial_config":"/home/user/pystudies/myenv/pythonbasic/projects/eve-ng_automation_PA/data/pa_initial_config.xlsx",
+        "pa_ha_config_template":"/home/user/pystudies/myenv/pythonbasic/projects/eve-ng_automation_PA/data/payload/paloalto_ha_template_config.xml",
+        "pa_ha_int_template":"/home/user/pystudies/myenv/pythonbasic/projects/eve-ng_automation_PA/data/payload/paloalto_interface_ha_template.xml",
+        "pa_interface_template":"/home/user/pystudies/myenv/pythonbasic/projects/eve-ng_automation_PA/data/payload/data_interface.xml",
+        "pa_zone_template":"/home/user/pystudies/myenv/pythonbasic/projects/eve-ng_automation_PA/data/payload/zones.xml",
+        "pa_virtual_router_template":"/home/user/pystudies/myenv/pythonbasic/projects/eve-ng_automation_PA/data/payload/virtual_router_template.xml",
+        "pa_static_routes_template":"/home/user/pystudies/myenv/pythonbasic/projects/eve-ng_automation_PA/data/payload/static_route_template.xml",
+        "pa_security_policy_template":"/home/user/pystudies/myenv/pythonbasic/projects/eve-ng_automation_PA/data/payload/security_policy_template.xml",
+        "pa_source_nat_template":"/home/user/pystudies/myenv/pythonbasic/projects/eve-ng_automation_PA/data/payload/source_nat_template.xml"
+    }
+}
