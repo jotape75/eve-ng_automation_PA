@@ -159,7 +159,7 @@ python src/main_pa.py
 ### 1. Edit Credential Files
 
 **Device Credentials:**
-Modify `data/credentials/pa_credentials.json` with your Palo Alto firewall credentials:
+Modify `/data/dev_creds_pa.json` with your Palo Alto firewall credentials:
 
 ```json
 [
