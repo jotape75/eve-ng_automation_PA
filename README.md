@@ -33,7 +33,7 @@ Comprehensive two-phase automation solution for Palo Alto firewall deployment wi
 eve-ng_automation_PA/
 ├── 📋 data/                                    # Configuration data
 │   ├── 🔧 automation_urls_pa.json             # Automation file paths configuration
-│   ├── 🔑 dev_creds_pa.json                   # Device credentials (renamed from pa_credentials.json)
+│   ├── 🔑 dev_creds_pa.json                   # Device credentials
 │   └── 📄 payload/                             # XML configuration templates
 │       ├── 🔌 data_interface.xml              # Interface configuration template
 │       ├── 📋 initial_config_template.txt     # Initial firewall setup commands
@@ -45,7 +45,6 @@ eve-ng_automation_PA/
 │       ├── 🌐 virtual_router_template.xml     # Virtual router setup
 │       └── 🏛️ zones.xml                       # Security zones configuration
 ├── 📝 log/                                    # Automation logs
-│   └── 2025-06-27 15:55:07_main_log_file.log # Example log file
 ├── 📖 README.md                               # Project documentation
 ├── 📦 requirements.txt                        # Python dependencies
 └── 📦 src/                                    # Source code
@@ -53,12 +52,6 @@ eve-ng_automation_PA/
     ├── 🎯 main_pa.py                          # Main orchestrator
     ├── ⚙️ pa_deployment_config.py             # Complete firewall configuration
     ├── 🤝 pa_deployment_ha.py                 # HA configuration manager
-    ├── 🗂️ __pycache__/                        # Python cache files
-    │   ├── exceptions_pa.cpython-310.pyc
-    │   ├── pa_deployment_config.cpython-310.pyc
-    │   ├── pa_deployment.cpython-310.pyc
-    │   ├── pa_deployment_ha.cpython-310.pyc
-    │   └── utils_pa.cpython-310.pyc
     └── 🛠️ utils_pa.py                         # Utilities and helpers
 ```
 
@@ -156,6 +149,16 @@ python src/main_pa.py
 
 ## ⚙️ Configuration
 
+📋 **Quick Note on Initial Setup:** 
+
+If you went through my previous post about Cisco FTD automation, you'll see that automation typically begins from adding the devices in EVE-NG, making the connections, starting nodes, and applying initial configuration via automation. Since we know that EVE-NG integration works from my FTD project, this time I planned to focus more on the Palo Alto-specific automation rather than EVE-NG deployment.
+
+However, if you're not sure which initial configuration to add into the firewalls when you first bring them up, here's the template I use as reference:
+
+🔗 https://github.com/jotape75/eve-ng_automation_PA/blob/main/data/payload/initial_config_template.txt
+
+**🔑 Security Note:** The configuration creates an `api_user` account specifically for automation purposes. This follows security best practices by separating human administrative access from programmatic API access.
+
 ### 1. Edit Credential Files
 
 **Device Credentials:**
@@ -186,7 +189,6 @@ Update `data/automation_urls_pa.json`:
 {
     "urls": {
         "pa_creds_file": "<YOUR_PROJECT_PATH>/eve-ng_automation_PA/data/credentials/pa_credentials.json",
-        "pa_initial_config": "<YOUR_PROJECT_PATH>/eve-ng_automation_PA/data/pa_initial_config.xlsx",
         "pa_ha_config_template": "<YOUR_PROJECT_PATH>/eve-ng_automation_PA/data/payload/paloalto_ha_template_config.xml",
         "pa_ha_int_template": "<YOUR_PROJECT_PATH>/eve-ng_automation_PA/data/payload/paloalto_interface_ha_template.xml",
         "pa_interface_template": "<YOUR_PROJECT_PATH>/eve-ng_automation_PA/data/payload/data_interface.xml",
