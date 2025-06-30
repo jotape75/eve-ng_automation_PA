@@ -31,27 +31,35 @@ Comprehensive two-phase automation solution for Palo Alto firewall deployment wi
 
 ```
 eve-ng_automation_PA/
-├── 📦 src/                          # Source code
-│   ├── 🎯 main_pa.py               # Main orchestrator
-│   ├── 🤝 pa_deployment_ha.py      # HA configuration manager
-│   ├── ⚙️ pa_deployment_config.py  # Complete firewall configuration
-│   ├── 🛠️ utils_pa.py              # Utilities and helpers
-│   └── ⚠️ exceptions_pa.py         # Custom exceptions
-├── 📋 data/                        # Configuration data
-│   ├── 🔑 credentials/             # Device credentials
-│   │   ├── pa_credentials.json     # Firewall access credentials
-│   │   └── *.json.example          # Template files
-│   └── 📄 payload/                 # XML configuration templates
-│       ├── pa_ha_config_template.xml
-│       ├── pa_interface_template.xml
-│       ├── pa_zones_template.xml
-│       ├── pa_security_policy_template.xml
-│       └── pa_source_nat_template.xml
-├── 📝 log/                         # Automation logs
-├── 📖 README.md                    # Project documentation
-├── 📄 LICENSE                      # MIT License
-├── 🚫 .gitignore                   # Git ignore rules
-└── 📦 requirements.txt             # Python dependencies
+├── 📋 data/                                    # Configuration data
+│   ├── 🔧 automation_urls_pa.json             # Automation file paths configuration
+│   ├── 🔑 dev_creds_pa.json                   # Device credentials (renamed from pa_credentials.json)
+│   └── 📄 payload/                             # XML configuration templates
+│       ├── 🔌 data_interface.xml              # Interface configuration template
+│       ├── 📋 initial_config_template.txt     # Initial firewall setup commands
+│       ├── 🤝 paloalto_ha_template_config.xml # HA device configuration
+│       ├── 🔗 paloalto_interface_ha_template.xml # HA interface settings
+│       ├── 🛡️ security_policy_template.xml    # Security policies template
+│       ├── 🔄 source_nat_template.xml         # Source NAT rules template
+│       ├── 🛣️ static_route_template.xml       # Static routing configuration
+│       ├── 🌐 virtual_router_template.xml     # Virtual router setup
+│       └── 🏛️ zones.xml                       # Security zones configuration
+├── 📝 log/                                    # Automation logs
+│   └── 2025-06-27 15:55:07_main_log_file.log # Example log file
+├── 📖 README.md                               # Project documentation
+├── 📦 requirements.txt                        # Python dependencies
+└── 📦 src/                                    # Source code
+    ├── ⚠️ exceptions_pa.py                    # Custom exceptions
+    ├── 🎯 main_pa.py                          # Main orchestrator
+    ├── ⚙️ pa_deployment_config.py             # Complete firewall configuration
+    ├── 🤝 pa_deployment_ha.py                 # HA configuration manager
+    ├── 🗂️ __pycache__/                        # Python cache files
+    │   ├── exceptions_pa.cpython-310.pyc
+    │   ├── pa_deployment_config.cpython-310.pyc
+    │   ├── pa_deployment.cpython-310.pyc
+    │   ├── pa_deployment_ha.cpython-310.pyc
+    │   └── utils_pa.cpython-310.pyc
+    └── 🛠️ utils_pa.py                         # Utilities and helpers
 ```
 
 ## 🚀 Installation
